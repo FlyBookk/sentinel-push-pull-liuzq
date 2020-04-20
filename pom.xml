@@ -67,6 +67,12 @@
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
 			<version>2.2.1.RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>sentinel-datasource-extension</artifactId>
+					<groupId>com.alibaba.csp</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.ctrip.framework.apollo/apollo-mockserver -->
@@ -78,6 +84,23 @@
 				<exclusion>
 					<artifactId>guava</artifactId>
 					<groupId>com.google.guava</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.alibaba.csp/sentinel-datasource-apollo -->
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-datasource-apollo</artifactId>
+			<version>1.7.2</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>sentinel-core</artifactId>
+					<groupId>com.alibaba.csp</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>apollo-client</artifactId>
+					<groupId>com.ctrip.framework.apollo</groupId>
 				</exclusion>
 			</exclusions>
 		</dependency>
