@@ -68,6 +68,19 @@
 			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
 			<version>2.2.1.RELEASE</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.ctrip.framework.apollo/apollo-mockserver -->
+		<dependency>
+			<groupId>com.ctrip.framework.apollo</groupId>
+			<artifactId>apollo-mockserver</artifactId>
+			<version>1.6.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>guava</artifactId>
+					<groupId>com.google.guava</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 	</dependencies>
 
 	<build>
